@@ -32,7 +32,7 @@ class Customer(models.Model):
 
 
 class Service(models.Model):
-    cust_name = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='services')
+    cust_name = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='Users')
     service_category = models.CharField(max_length=100)
     description = models.TextField()
     location = models.CharField(max_length=200)
@@ -56,8 +56,9 @@ class Service(models.Model):
     def __str__(self):
         return str(self.cust_name)
 
+
 class Product(models.Model):
-    cust_name = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='products')
+    cust_name = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='Rhymes')
     product = models.CharField(max_length=100)
     p_description = models.TextField()
     quantity = models.IntegerField()
