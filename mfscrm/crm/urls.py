@@ -2,6 +2,7 @@ from django.conf.urls import url
 from . import views
 from django.urls import path, re_path
 
+
 app_name = 'crm'
 urlpatterns = [
     path('', views.home, name='home'),
@@ -18,7 +19,6 @@ urlpatterns = [
     path('product/<int:pk>/edit/', views.product_edit, name='product_edit'),
     path('product/<int:pk>/delete/', views.product_delete, name='product_delete'),
     path('customer/<int:pk>/summary/', views.summary, name='summary'),
-
 
 ]
 
