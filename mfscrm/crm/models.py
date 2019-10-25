@@ -56,7 +56,6 @@ class Service(models.Model):
     def __str__(self):
         return str(self.cust_name)
 
-
 class Product(models.Model):
     cust_name = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='Rhymes')
     product = models.CharField(max_length=100)
