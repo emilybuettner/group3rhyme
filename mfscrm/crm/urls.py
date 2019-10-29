@@ -19,7 +19,10 @@ urlpatterns = [
     path('product/<int:pk>/edit/', views.product_edit, name='product_edit'),
     path('product/<int:pk>/delete/', views.product_delete, name='product_delete'),
     path('customer/<int:pk>/summary/', views.summary, name='summary'),
+<<<<<<< HEAD
     path('account_information', views.account_information, name='account_information'),
+=======
+>>>>>>> efc0cd5d2761ca5f8e12fe4255a95b21ea8e6dd4
 
 ]
 
