@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
+
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
             margin-bottom: 0;
@@ -50,9 +51,7 @@
 </head>
 <body id="app-layout">
 <nav class="navbar navbar-inverse">
-    body {
-            background-color: blue;
-        }
+
     <div class="container-fluid">
         <div class="navbar-header">
 
@@ -74,9 +73,9 @@
             <ul class="nav navbar-nav">
                 <li><a href="{% url 'crm:home' %}">Home</a></li>
                 <li><a href="{% url 'crm:customer_list' %}">Audio</a></li>
-               <li><a href="{% url 'crm:service_list' %}">Read</a></li>
+                <li><a href="{% url 'crm:service_list' %}">Read</a></li>
                 <li><a href="{% url 'crm:product_list' %}">Upgrade</a></li>
-
+                <li><a href="{% url 'crm:product_list' %}">Sign Up</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
@@ -84,8 +83,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             <span class="caret"></span>
                         </a>
+
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{% url 'logout' %}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            <li><a href="{% url 'crm:account_information' %}">Account Information</a></li>
                         </ul>
                     </li>
                 {% else %}

@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.humanize'
 ]
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During development only
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

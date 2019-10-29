@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Customer, Service, Product
+from .models import Customer, Service, Product, Account
 
 
 class CustomerForm(forms.ModelForm):
@@ -19,3 +19,9 @@ class ProductForm(forms.ModelForm):
    class Meta:
        model = Product
        fields = ('cust_name', 'product', 'p_description', 'quantity', 'pickup_time', 'charge' )
+
+
+class AccountForm(forms.ModelForm):
+   class Meta:
+       model = Account
+       fields = ('first_name', 'last_name', 'phone', 'email', 'zipcode' )

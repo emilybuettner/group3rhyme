@@ -8,7 +8,8 @@
                 <div class="page-container">
 
                     <h2 class="top-menu">Hello {{ user.username }},</h2>
-                    <p>Please choose from below options.</p>
+                    <h1>Welcome to story time!</h1>
+                    <p>A place to find all of your favorite nursery rhymes</p>
 
                 </div>
             {% endif %}
@@ -20,10 +21,10 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="thumbnail">
-                                        <img src="{% static "images/customer.jpg" %}" alt="customer"/>
+                                        <img src="{% static "images/humpty dumpty.jpeg" %}" alt="customer"/>
                                         <div class="caption">
-                                            <h2>Customer</h2>
-                                            <p>We see our success in our customers success </p>
+                                            <h2>Listen to nursery rhymes </h2>
+                                            <p></p>
                                             <p><a class="btn btn-primary" href="{% url 'crm:customer_list' %}"
                                                   role="button">View
                                                 details &raquo;</a></p>
@@ -32,10 +33,9 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="thumbnail">
-                                        <img src="{% static "images/cupcakes.jpeg" %}" alt="cupcakes"/>
+                                        <img src="{% static "images/mom&daughter.jpeg" %}" alt="cupcakes"/>
                                         <div class="caption">
-                                            <h2>Services</h2>
-                                            <p>Great Services</p>
+                                            <h2>Make reading fun!</h2>
                                             <p><a class="btn btn-primary" href="{% url 'crm:service_list' %}"
                                                   role="button">View
                                                 details &raquo;</a></p>
@@ -44,10 +44,10 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="thumbnail">
-                                        <img src="{% static "images/lunch.jpeg" %}" alt="lunch"/>
+                                        <img src="{% static "images/happy.jpg" %}" alt="lunch"/>
                                         <div class="caption">
-                                            <h2>Products</h2>
-                                            <p>Great Products.</p>
+                                            <h2>Upgrade</h2>
+                                            <p>Here is what we offer!</p>
                                             <p><a class="btn btn-primary" href="{% url 'crm:product_list' %}"
                                                   role="button">View
                                                 details &raquo;</a></p>

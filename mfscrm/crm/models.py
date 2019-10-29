@@ -32,7 +32,7 @@ class Customer(models.Model):
 
 
 class Service(models.Model):
-    cust_name = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='services')
+    cust_name = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='Users')
     service_category = models.CharField(max_length=100)
     description = models.TextField()
     location = models.CharField(max_length=200)
@@ -57,7 +57,7 @@ class Service(models.Model):
         return str(self.cust_name)
 
 class Product(models.Model):
-    cust_name = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='products')
+    cust_name = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='Rhymes')
     product = models.CharField(max_length=100)
     p_description = models.TextField()
     quantity = models.IntegerField()
@@ -78,3 +78,27 @@ class Product(models.Model):
 
     def __str__(self):
         return str(self.cust_name)
+
+
+# Account model.
+class Account(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    phone = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
+    zipcode = models.CharField(max_length=10)
+
+    created_date = models.DateTimeField(
+        default=timezone.now)
+    updated_date = models.DateTimeField(auto_now_add=True)
+
+    def created(self):
+        self.created_date = timezone.now()
+        self.save()
+
+    def updated(self):
+        self.updated_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return str(self.first_name)

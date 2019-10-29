@@ -157,3 +157,10 @@ def summary(request, pk):
                                                     'sum_product_charge': sum_product_charge,})
 
 
+@login_required
+def account_information(request):
+    account = Account.objects.filter(created_date__lte=timezone.now())
+    return render(request, 'crm/account_information.html',
+                 {'accounts': account})
+
+
