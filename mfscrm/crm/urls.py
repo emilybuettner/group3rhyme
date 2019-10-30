@@ -19,8 +19,11 @@ urlpatterns = [
     path('product/<int:pk>/edit/', views.product_edit, name='product_edit'),
     path('product/<int:pk>/delete/', views.product_delete, name='product_delete'),
     path('customer/<int:pk>/summary/', views.summary, name='summary'),
+<<<<<<< HEAD
     path('account_information', views.account_information, name='account_information'),
 
+=======
+>>>>>>> 4ee4bf724cda857499bf2accb3f4a70746e4f5b4
 ]
 
 
