@@ -1,0 +1,33 @@
+{% extends 'crm/base.html' %}
+{% block content %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nursery Rhymes!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+<style>
+    body{
+        background-color: lightblue;
+    }
+</style>
+<div class="content container">
+    <p>
+        Block content: rhyme text
+    </p>
+    <p>
+        (pdf hyperlink)
+    </p>
+    <p>
+        (audio hyperlink)
+    </p>
+</div>
+<div class="links">
+<a href="{% url 'crm:home' %}" class="row"><span
+        class="btn btn-primary">Go Home</span></a>
+</div>
+</body>
+</html>
+
+{% endblock %}

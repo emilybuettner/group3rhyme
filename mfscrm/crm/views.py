@@ -164,3 +164,8 @@ def account_information(request):
                  {'accounts': account})
 
 
+def nurseryList(request):
+    return render(request, 'crm/nurseryList.html', {'crm': nurseryList})
+
+def nurseryPage(request):
+    return render(request, 'crm/nurseryPage.html', {'crm': nurseryPage})

@@ -20,6 +20,9 @@ urlpatterns = [
     path('product/<int:pk>/delete/', views.product_delete, name='product_delete'),
     path('customer/<int:pk>/summary/', views.summary, name='summary'),
     path('account_information', views.account_information, name='account_information'),
+    path('nurseryList', views.nurseryList, name='nurseryList'),
+    path('nurseryPage', views.nurseryPage, name='nurseryPage')
+
 ]
 
 

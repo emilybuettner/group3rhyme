@@ -69,14 +69,14 @@
                 Nursery Rhymes
             </a>
         </div>
-        <div class="title bar" id="titlebar">
+{#      #  <div class="title bar" id="titlebar">#}
             <img src="{% static "images/Nursery Rhyme Title Bar.png" %}" alt="title"/>
-        </div>
+{#        </div>#}
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li><a href="{% url 'crm:home' %}">Home</a></li>
+                <li><a href="{% url 'crm:nurseryList' %}">Nursery List</a></li>
                 <li><a href="{% url 'crm:customer_list' %}">Audio</a></li>
-                <li><a href="{% url 'crm:service_list' %}">Read</a></li>
                 <li><a href="{% url 'crm:product_list' %}">Upgrade</a></li>
                 <li><a href="{% url 'crm:product_list' %}">Sign Up</a></li>
             </ul>

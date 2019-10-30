@@ -1,0 +1,28 @@
+{% extends 'crm/base.html' %}
+{% block content %}
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Nursery Rhymes</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    </head>
+    <body>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+    <div class="content container">
+        <h2>Browse our Collection of Nursery Rhyme</h2>
+        <p>
+            <a href="{% url 'crm:nurseryPage' %}">A Nursery Rhyme Page</a>
+        </p>
+    </div>
+    <div class="links">
+        <a href="{% url 'crm:home' %}" class="row"><span
+        class="btn btn-primary">Go Home</span></a>
+    </div>
+    </body>
+    </html>
+{% endblock %}
