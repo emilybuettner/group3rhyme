@@ -16,7 +16,9 @@
             margin-bottom: 0;
             border-radius: 0;
         }
-
+        .fit{
+                max-width: 100%;
+            }
         /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
         .row.content {
             height: 450px
@@ -70,7 +72,7 @@
             </a>
         </div>
 {#      #  <div class="title bar" id="titlebar">#}
-            <img src="{% static "images/Nursery Rhyme Title Bar.png" %}" alt="title"/>
+            <img class="fit" src="{% static "images/Nursery Rhyme Title Bar.png" %}" alt="title"/>
 {#        </div>#}
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
