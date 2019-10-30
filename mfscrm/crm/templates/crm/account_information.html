@@ -1,0 +1,62 @@
+{% extends 'crm/base.html' %}
+{% block content %}
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Nursery Rhymes Audio</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    </head>
+    <body>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Welcome!</div>
+                    <div class="panel-body">
+                        This page displays your account information
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h2 style="padding-left: 15Px">Account Information</h2>
+    </div>
+         <table class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr class="bg-info">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Zipcode</th>
+
+                <th colspan="3">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for account in accounts %}
+                <tr>
+                    <td>{{ account.first_name }}</td>
+                    <td>{{ account.last_name }}</td>
+                    <td>{{ account.phone }}</td>
+                    <td>{{ account.email }}</td>
+                    <td>{{ account.zipcode }}</td>
+                    <td><a href="" class="btn btn-info">Edit</a>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+
+    </body>
+    </html>
+{% endblock %}
